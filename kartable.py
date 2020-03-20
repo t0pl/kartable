@@ -21,7 +21,7 @@ class main:
         self.email = email
         self.password = password
         self.ecole = ecole
-        self.birthdate = birthdate.split("/") if len(self.birthdate.split("/")) == 3 else None
+        self.birthdate = birthdate.split("/") if len(str(birthdate).split("/")) == 3 else None
         self.driver = helium.start_chrome(self.url)
 
     def register(self, sponso=False):
